@@ -25,4 +25,7 @@
     <item
         android:id="@id/menu_contextual_share"
         android:title="@string/share" />
+    <item
+        android:id="@id/menu_contextual_share_link"
+        android:title="@string/share_link" />
 </menu>

@@ -252,6 +252,14 @@ public abstract class ItemRecyclerViewAdapter<VH extends ItemRecyclerViewAdapter
                                                 null : item.getDisplayedText().toString());
                         return true;
                     }
+                    if (menuItem.getItemId() == R.id.menu_contextual_share_link) {
+                        if (item.getUrl() == null) {
+                          Toast.makeText(mContext, R.string.no_url, Toast.LENGTH_SHORT).show();
+                          return true;
+                        }
+                        AppUtils.share(mContext, null, item.getUrl());
+                        return true;
+                    }
                     return false;
                 })
                 .show());

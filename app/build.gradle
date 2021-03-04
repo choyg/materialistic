@@ -24,12 +24,14 @@ android {
 
     buildTypes {
         debug {
-            minifyEnabled !rootProject.ext.ci
-            useProguard false
+            minifyEnabled true
+            useProguard true
+            shrinkResources true
         }
         release {
             minifyEnabled true
             shrinkResources true
+            useProguard true
         }
     }
 
